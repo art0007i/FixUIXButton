@@ -2,6 +2,8 @@
 
 This mod was created to fix issue [#593](https://github.com/Neos-Metaverse/NeosPublic/issues/593)
 
+#### The button only works for the user who created it, and also only fixes it for the person who pressed the button.
+
 A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) which adds a button to RectTransforms that refreshes them which seems to fix broken uix that has stopped updating.
 
 ## Installation
