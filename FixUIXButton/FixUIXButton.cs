@@ -8,7 +8,7 @@ namespace FixUIXButton
     {
         public override string Name => "FixUIXButton";
         public override string Author => "art0007i";
-        public override string Version => "1.0.0";
+        public override string Version => "1.1.0";
         public override string Link => "https://github.com/art0007i/FixUIXButton/";
         public override void OnEngineInit()
         {
@@ -23,8 +23,9 @@ namespace FixUIXButton
             {
                 var btn = ui.Button("Fix UIX");
                 btn.LocalPressed += (button, data) => {
-                    AccessTools.Field(__instance.GetType(), "_registeredCanvas").SetValue(__instance, null);
-                    AccessTools.Method(__instance.GetType(), "RegisterCanvas").Invoke(__instance, null);
+                    var canvas = AccessTools.Field(__instance.GetType(), "_registeredCanvas").GetValue(__instance) as Canvas;
+
+                    AccessTools.Method(typeof(Canvas), "RegisterDirtyTransform").Invoke(canvas, new object[] { __instance });
                 };
             }
         }

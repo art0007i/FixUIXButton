@@ -1,10 +1,6 @@
 # FixUIXButton
 
-#### Warning: Pressing the button on UIX that isn't currently broken might cause the entire canvas to break.
-I'm working on fixing this so that the button is fool-proof but for now it is what it is.<br>
-
-A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that adds a button to RectTransforms that refreshes the component by setting it's registered canvas to null and then calling the RegisterCanvas() method.<br>
-Doing this seems to force the uix components to refresh and fix themselves after breaking.
+A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) which adds a button to RectTransforms that refreshes them which seems to fix broken uix that has stopped updating.
 
 ## Installation
 1. Install [NeosModLoader](https://github.com/zkxs/NeosModLoader).
